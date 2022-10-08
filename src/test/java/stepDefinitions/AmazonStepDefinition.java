@@ -6,19 +6,23 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import pages.AmazonPage;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 import static utilities.Driver.getDriver;
 
 public class AmazonStepDefinition {
+    AmazonPage amazonPage = new AmazonPage();
     @Given("Kullanici amazon sayfasina gider")
     public void kullaniciAmazonSayfasinaGider() {
-        Driver.getDriver().get("https://www.amazon.com");
+
+        Driver.getDriver().get(ConfigReader.getProperty("amznUrl"));
     }
 
     @Then("Kullanici Nutella icin arama yapar")
     public void kullaniciNutellaIcinAramaYapar() {
-        Driver.getDriver().findElement(By.id("twotabsearchtextbox")).sendKeys("Nutella", Keys.ENTER);
+        amazonPage.aramaKutusu.sendKeys("Nutella", Keys.ENTER);
     }
 
     @And("Kullanici sonuclarin Nutella icerdigini test eder")
@@ -29,5 +33,15 @@ public class AmazonStepDefinition {
     @And("Kullanici sayfayi kapatir")
     public void kullaniciSayfayiKapatir() {
         Driver.closeDriver();
+    }
+
+    @Then("Kullanici Selenium icin arama yapar")
+    public void kullaniciSeleniumIcinAramaYapar() {
+        amazonPage.aramaKutusu.sendKeys("Selenium", Keys.ENTER);
+    }
+
+    @And("Kullanici sonuclarin Selenium icerdigini test eder")
+    public void kullaniciSonuclarinSeleniumIcerdiginiTestEder() {
+        Assert.assertTrue(amazonPage.aramaSonucElementi.getText().contains("Selenium"));
     }
 }
