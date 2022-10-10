@@ -18,6 +18,7 @@ public class AmazonStepDefinition {
     public void kullaniciAmazonSayfasinaGider() {
 
         Driver.getDriver().get(ConfigReader.getProperty("amznUrl"));
+
     }
 
     @Then("Kullanici Nutella icin arama yapar")
@@ -43,5 +44,15 @@ public class AmazonStepDefinition {
     @And("Kullanici sonuclarin Selenium icerdigini test eder")
     public void kullaniciSonuclarinSeleniumIcerdiginiTestEder() {
         Assert.assertTrue(amazonPage.aramaSonucElementi.getText().contains("Selenium"));
+    }
+
+    @Then("Kullanici iphone icin arama yapar")
+    public void kullaniciIphoneIcinAramaYapar() {
+        amazonPage.aramaKutusu.sendKeys("iphone", Keys.ENTER);
+    }
+
+    @And("Kullanici sonuclarin iphone icerdigini test eder")
+    public void kullaniciSonuclarinIphoneIcerdiginiTestEder() {
+        Assert.assertTrue(amazonPage.aramaSonucElementi.getText().contains("iphone"));
     }
 }
