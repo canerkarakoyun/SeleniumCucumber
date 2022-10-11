@@ -1,7 +1,7 @@
 
 @All
 Feature: Amazon Search
-  @gp1
+  @gp3
   Scenario: TC01 Kullanici amazonda Nutella aratir
 
     Given Kullanici amazon sayfasina gider
@@ -9,14 +9,14 @@ Feature: Amazon Search
     And Kullanici sonuclarin Nutella icerdigini test eder
 
 
-    @gp1
+    @gp3
     Scenario: TC02 kullanici amazonda Selenium aratir
 
       Given Kullanici amazon sayfasina gider
       Then Kullanici Selenium icin arama yapar
       And Kullanici sonuclarin Selenium icerdigini test eder
 
-  @gp2
+  @gp4
   Scenario: TC02 kullanici amazonda iphone aratir
 
     Given Kullanici amazon sayfasina gider
