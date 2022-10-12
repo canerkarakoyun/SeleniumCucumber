@@ -1,4 +1,5 @@
 Feature: US006 Kullanici amazonda verilen kelimeleri aratir
+
   Scenario Outline: TC01 Kullanici amazonda verilen kelimeleri aratir
     Given Kullanici "amazonUrl" sayfasina gider
     And Kullanici "<istenenKelime>" icin arama yapar
@@ -6,6 +7,6 @@ Feature: US006 Kullanici amazonda verilen kelimeleri aratir
     And Kullanici sayfayi kapatir
     Examples:
       | istenenKelime | istenenKelimeKontrol |
-      | nutella | nutella |
-      | selenium | selenium |
-      | SQL | SQL |
+      | nutella       | nutella              |
+      | selenium      | selenium             |
+      | SQL           | SQL                  |
