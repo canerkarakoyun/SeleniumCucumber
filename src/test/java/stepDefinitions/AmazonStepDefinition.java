@@ -82,7 +82,7 @@ public class AmazonStepDefinition {
     @Then("{int} saniye bekler")
     public void saniyeBekler(int beklemeSuresi) {
         try {
-            Thread.sleep(beklemeSuresi*1000);
+            Thread.sleep(beklemeSuresi*500);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
