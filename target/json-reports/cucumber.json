@@ -1,0 +1,106 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-10-16T06:43:04.496Z",
+        "line": 3,
+        "name": "TC01 Parametre kullanimi",
+        "description": "",
+        "id": "us004-parametre-kullanimi;tc01-parametre-kullanimi",
+        "after": [
+          {
+            "result": {
+              "duration": 2033979000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6364268100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Kullanici \"https://trendyol.com\" sayfasinda",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://trendyol.com\"",
+                  "offset": 10
+                }
+              ],
+              "location": "stepDefinitions.HepsiBuradaStepDefinition.kullaniciSayfasinda(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1573811100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "3 saniye bekler",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 0
+                }
+              ],
+              "location": "stepDefinitions.AmazonStepDefinition.saniyeBekler(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 45959100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Kullanici Url'in \"trend\" icerdigini test eder",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"trend\"",
+                  "offset": 17
+                }
+              ],
+              "location": "stepDefinitions.AmazonStepDefinition.kullaniciUrlInIcerdiginiTestEder(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 380541000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Kullanici sayfayi kapatir",
+            "match": {
+              "location": "stepDefinitions.AmazonStepDefinition.kullaniciSayfayiKapatir()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@gp5"
+          }
+        ]
+      }
+    ],
+    "name": "US004 Parametre kullanimi",
+    "description": "",
+    "id": "us004-parametre-kullanimi",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/US004_ParametreKullanimi.feature",
+    "tags": []
+  }
+]
