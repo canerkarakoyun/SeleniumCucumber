@@ -67,7 +67,7 @@ public class AmazonStepDefinition {
         Assert.assertTrue(actualKelime.contains(beklenenKelime));
     }
 
-    @Given("Kullanici {string} sayfasina gider")
+    @Given("kullanici {string} sayfasina gider")
     public void kullaniciSayfasinaGider(String istenenUrl) {
         Driver.getDriver().get(ConfigReader.getProperty(istenenUrl));
     }
